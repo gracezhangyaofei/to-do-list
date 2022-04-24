@@ -1,5 +1,5 @@
 import './TodoItem.css'
-import { Place, Todo, toggleTodo } from './TodoWithData'
+import { Place, Todo, ToggleTodo } from './TodoWithData'
 
 function placeToString(place: Place): string {
 	if (place === 'home') {
@@ -16,7 +16,7 @@ const TodoItem = ({
 	toggleTodo
 }: {
 	todo: Todo
-	toggleTodo: toggleTodo
+	toggleTodo: ToggleTodo
 }) => {
 	return (
 		<>

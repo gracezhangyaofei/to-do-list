@@ -1,40 +1,17 @@
-import React, { useState } from 'react'
-import { Todo } from './TodoWithData'
+import { Todo, ToggleTodo, CompleteAll } from './TodoWithData'
 import TodoItem from './TodoItem'
 
-
-type CompleteTodo = Todo & {
-	readonly done: true
-}
-
 const TodoList = ({
-	todos: items,
-	showMarkAllAsCompleted
+	todos,
+	showMarkAllAsCompleted,
+	toggleTodo,
+	completeAll
 }: {
 	todos: Todo[]
 	showMarkAllAsCompleted?: boolean
+	toggleTodo: ToggleTodo
+	completeAll: CompleteAll
 }) => {
-	const [todos, setTodos] = useState<Array<Todo>>(items);
-
-	const completeAll = (todos: Todo[]) => {
-		const updateTodos = todos.map(todo => ({
-			...todo,
-			done: true
-		}))
-		setTodos(updateTodos);
-		return updateTodos;
-	}
-
-	const toggleTodo = (selectedTodo: Todo) => {
-		const updateTodos = todos.map(todo => {
-			if (todo === selectedTodo) {
-				return {...todo, done: !todo.done};
-			}
-			return todo;
-		})
-		setTodos(updateTodos);
-	}
-
 	return (
 		<>
 			<table>
