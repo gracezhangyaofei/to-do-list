@@ -1,4 +1,4 @@
-import { Todo, ToggleTodo, CompleteAll } from './TodoWithData'
+import React from 'react'
 import TodoItem from './TodoItem'
 
 const TodoList = ({
@@ -30,6 +30,3 @@ const TodoList = ({
 }
 
 export default TodoList
-
-
-

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import TodoWithData, { Todo } from './TodoWithData'
+import TodoWithData from './TodoWithData'
 import reportWebVitals from './reportWebVitals';
 
 

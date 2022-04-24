@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { AddTodo } from './TodoWithData'
 
 const AddTodoItem = ({
 	addTodo

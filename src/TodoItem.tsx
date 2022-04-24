@@ -1,5 +1,5 @@
+import React from 'react'
 import './TodoItem.css'
-import { Place, Todo, ToggleTodo } from './TodoWithData'
 
 function placeToString(place: Place): string {
 	if (place === 'home') {

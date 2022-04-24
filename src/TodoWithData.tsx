@@ -2,21 +2,6 @@ import React, { useState } from 'react'
 import TodoList from './TodoList'
 import AddTodoItem from './AddTodoItem'
 
-// union type
-export type Place = 'home' | 'work' | { custom: string}
-
-// Readonly object
-export type Todo = Readonly<{
-	id: number
-	text: string
-	done: boolean
-	place?: Place // place with ? to make it optional
-}>
-
-export type CompleteAll = (todos: Todo[]) => void;
-export type ToggleTodo = (selectedTodo: Todo) => void;
-export type AddTodo = (newTodo: string) => void;
-
 const TodoWithData = ({
 	todos: items,
 	showMarkAllAsCompleted
